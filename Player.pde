@@ -1,24 +1,25 @@
 class Player{
     int xPlayer;
     int yPlayer;
-    int sPlayer;
+    int speed = 10;
+    PImage img;
     
-    Player(int x, int y, int s){
+    
+    Player(int x, int y, PImage image){
       xPlayer = x;
       yPlayer = y;
-      sPlayer = s;
+      img = image;
     }
     
   void character(){
-    stroke(0);
-    fill(#16D9ED);
-    square(xPlayer, yPlayer, sPlayer); 
-     
+    
+     scale(0.3);
+     image(img, xPlayer, yPlayer);
    }
   
   void movement(char pressed){
     
-    if(pressed == "d"){
+    if(pressed == 'd'){
       xPlayer += 10;
       
     }

@@ -1,5 +1,6 @@
 Platform platform, lowerPlatform;
 Player firstPlayer, secondPlayer;
+PImage img1, img2;
 
 
 
@@ -15,8 +16,10 @@ void setup() {
   lowerPlatform.name = "Lower Ground";
 
   //Player set-up
-  firstPlayer = new Player(400, 350, 50);
-  secondPlayer = new Player(800, 350, 50);
+  
+  img1 = loadImage("Abes.png");
+  firstPlayer = new Player(400, 350, img1);
+  //secondPlayer = new Player(800, 350, 50);
   size(1280, 720);
   
 }
@@ -47,7 +50,7 @@ void draw() {
 
 void keyPressed(){
   
-  if(key == "a" || key == "w"|| key == "s" || key == "d"){
+  if(key == 'w' || key == 'a'|| key == 's' || key == 'd'){
     firstPlayer.movement(key);
   }
   
