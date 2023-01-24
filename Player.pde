@@ -1,7 +1,9 @@
 class Player{
     int xPlayer;
     int yPlayer;
-    int speed = 10;
+    
+    
+    
     PImage img;
     
     
@@ -13,7 +15,7 @@ class Player{
     
   void character(){
     
-     scale(0.3);
+     //scale(0.3);
      image(img, xPlayer, yPlayer);
    }
   
